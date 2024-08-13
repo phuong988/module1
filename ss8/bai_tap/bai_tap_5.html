@@ -9,7 +9,7 @@
        let diemkt = +prompt("nhập điểm bài kiểm tra: ",'');
        let diemgk = +prompt("nhập điểm bài thi giữa kỳ: ",'');
        let diemck = +prompt("nhập điểm bài thi cuối kỳ: ",'');
-       let dtb = (diemkt + diemgk + diemck)/3;
+       let dtb = (diemkt + diemgk*2 + diemck*3)/6;
        if( dtb >= 5 && dtb< 6.5)
            document.write("xếp loại TB");
            else if( dtb >= 6.5 && dtb <8)
