@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa hồng nhận được</title>
+</head>
+<body>
+<script>
+    let doanhso = +prompt("Nhập doanh số bán hàng: ",'');
+    const hangc = 3000000;
+    const hangb = 5000000;
+    const hanga = 10000000;
+    const hangs = 100000000;
+    let hoaHong;
+    if(doanhso <= hangc){
+        hoahong = doanhso*10/100;
+        document.write("hoa hồng nhận được là: " + hoahong);
+
+    }else if(doanhso <= hangb){
+        hoaHong=doanhso*12/100;
+        document.write("hoa hồng nhận được là: " + hoaHong);
+
+    }else if(doanhso <= hanga){
+        hoaHong=doanhso*13/100;
+        document.write("hoa hồng nhận được là: " + hoaHong);
+
+    }else if(doanhso <= hangs){
+        hoaHong=doanhso*15/100;
+        document.write("hoa hồng nhận được là: " + hoaHong);
+    }
+</script>
+</body>
+</html>

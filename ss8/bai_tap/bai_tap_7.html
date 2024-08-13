@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại </title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập số phút " id="sophut">
+    <select id="vung_mang">
+        <option value="noiMang"  id="noimang">Nội mạng</option>
+        <option value="ngoaiMang"  id="ngoaimang">Ngoại mạng</option>
+        <option value="quocTe"     id="quocte">Quốc tế</option>
+    </select>
+    <button type="button" onclick="tong()">Giá cước</button>
+    <p id="giacuoc"></p>
+    <script>
+    function tong() {
+        let soPhut = document.getElementById("sophut").value;
+        let vungMang = document.getElementById("vung_mang").value;
+        let giaCuoc;
+        if (vungMang == "noiMang") {
+            giaCuoc = Number(soPhut) * 890;
+        } else if (vungMang == "ngoaiMang") {
+            giaCuoc = Number(soPhut) * 1190;
+        } else{
+            giaCuoc = (Number(soPhut) * 60 - 6) * 110 + 660;
+        }
+        document.getElementById("giacuoc").innerHTML = "cước điện thoại là: "+ giaCuoc
+    }
+</script>
+</body>
+</html>

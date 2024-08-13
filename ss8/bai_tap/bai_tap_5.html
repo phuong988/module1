@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng</title>
+</head>
+<body>
+    <script>
+       let diemkt = +prompt("nhập điểm bài kiểm tra: ",'');
+       let diemgk = +prompt("nhập điểm bài thi giữa kỳ: ",'');
+       let diemck = +prompt("nhập điểm bài thi cuối kỳ: ",'');
+       let dtb = (diemkt + diemgk + diemck)/3;
+       if( dtb >= 5 && dtb< 6.5)
+           document.write("xếp loại TB");
+           else if( dtb >= 6.5 && dtb <8)
+               document.write("xếp loại Khá");
+               else if(dtb >= 8 && dtb <=10)
+                   document.write("xếp loại Giỏi");
+       else
+           document.write("xếp loại yếu");
+    </script>
+</body>
+</html>
