@@ -6,15 +6,42 @@
 </head>
 <body>
     <h1>Caculator</h1>
-    <section class="invite">
-        <p class="icon"><i class="far fa-envelope"></i></p>
-        <input type="text" value="" placeholder="Nhập số thứ nhất ">
-        <input type="text" value="" placeholder="Nhập số thứ hai ">
-        <button>Cộng</button>
-        <button>Trừ</button><br/>
-        <h3>Result:</h3><br/>
+    <form>
+        <input type="text" id="number1" placeholder="Nhập số thứ nhất ">
+        <input type="text" id="number2" placeholder="Nhập số thứ hai "><br/>
+        <button type="button" onclick="add()">Cộng(+)</button>
+        <button type="button" onclick="subtract()">Trừ(-)</button>
+        <button type="button" onclick="mutipply()">Nhân(*)</button>
+        <button type="button" onclick="divide()">Chia(/)</button>
+        <h4>Result:</h4>
+        <p id="kq"></p>
+    </form>
+<script type="text/javascript">
+    function add() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        let ketQua = num1 + num2 ;
+        document.getElementById('kq').innerHTML = ketQua ;
+    }
+    function subtract() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        let ketQua = num1 - num2 ;
+        document.getElementById('kq').innerHTML = ketQua;
+    }
+    function mutipply() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        let ketQua = num1 * num2 ;
+        document.getElementById('kq').innerHTML= ketQua;
+    }
+    function divide() {
+        let num1 = +document.getElementById('number1').value;
+        let num2 = +document.getElementById('number2').value;
+        let ketQua = num1 / num2 ;
+        document.getElementById('kq').innerHTML= ketQua;
+    }
 
-
-    </section>
+</script>
 </body>
 </html>
