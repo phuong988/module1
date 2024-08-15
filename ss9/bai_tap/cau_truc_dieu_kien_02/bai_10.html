@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập chỉ số điện tháng vừa rồi(kWh):"));
+    let giaTien;
+    if (n > 0 && n <= 50) {
+        giaTien = n * 1806;
+        document.write("giá tiền điện là: " + giaTien);
+    } else if (n <= 100) {
+        giaTien = (50 * 1806) + (n - 50) * 1866;
+        document.write("giá tiền điện là: " + giaTien);
+    } else if (n <= 200) {
+        giaTien = (50 * 1806) + 50 * 1866 + (n - 100) * 2167;
+        document.write("giá tiền điện là: " + giaTien);
+    } else if (n <= 300) {
+        giaTien = (50 * 1806) + 50 * 1866 + 100 * 2167 + (n - 200) * 2729;
+        document.write("giá tiền điện là: " + giaTien);
+    } else if (n <= 400) {
+        giaTien = (50 * 1806) + 50 * 1866 + 100 * 2167 + 100 * 2729 + (n - 300) * 3050;
+        document.write("giá tiền điện là: " + giaTien);
+    } else if (n > 400) {
+        giaTien = (50 * 1806) + 50 * 1866 + 100 * 2167 + 100 * 2729 + 100 * 3050 + (n - 400) * 3151;
+        document.write("giá tiền điện là: " + giaTien);
+    } else {
+        document.write("vui lòng nhập lại chỉ số tiền điện");
+    }
+</script>
+</body>
+</html>
