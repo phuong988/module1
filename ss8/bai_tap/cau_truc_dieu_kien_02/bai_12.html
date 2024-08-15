@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi xuất ngân hàng</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt("Nhập số tiền muốn gửi: "));
+    let month = parseInt(prompt("Nhập số tháng muốn gửi: "));
+    let laiXuatHangThang = parseInt(prompt("Nhập lãi xuất hàng tháng: "));
+    let totalMoney;
+    if (x > 0 && month > 0) {
+        totalMonney = x * Math.pow(1 + laiXuatHangThang, month);
+        document.write("Lãi ngân hàng là: " + totalMoney);
+    } else {
+        alert("Nhập lại dữ liệu đầu vào!");
+    }
+</script>
+</body>
+</html>

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Độ C sang F </title>
 </head>
 <body>
-$END$
+    <input type="text" id="nhietDoC" placeholder="Nhập nhiệt độ C:" >
+    <button type="button" onclick="chuyenDoi()">Chuyển đổi</button></p>
+<script>
+    function chuyenDoi() {
+        let c = document.getElementById("nhietDoC").value;
+        let f;
+        f = (Number(c) * 9 / 5) + 32;
+        document.getElementById("nhietDoC").innerHTML="nhiệt độ F là: " + f;
+    }
+</script>
 </body>
 </html>

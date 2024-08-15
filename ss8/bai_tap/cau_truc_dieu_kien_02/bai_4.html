@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = prompt("Nhập chiều dài hcn: ", '');
+    let b = prompt("nhập chiều rộng hình chữ nhật:");
+    if (a > 0 && b > 0) {
+        let s;
+        s = a * b;
+        document.write("Diện tích hình chữ nhật là: " + s);
+    } else
+        alert("vui long nhập lại chiều dài 2 cạnh!!");
+</script>
 </body>
 </html>
