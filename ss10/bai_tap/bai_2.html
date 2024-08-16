@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều chỉnh nhiệt độ</title>
+</head>
+<body>
+<script>
+
+    do {
+        let degreeC = parseFloat(prompt("Nhập nhiệt độ hiện tại"));
+        if (degreeC < 20) {
+            document.write("Hãy tăng nhiệt độ lên! ");
+        } else if (degreeC > 100) {
+            document.write("Hãy giảm nhiệt độ xuống! ");
+        } else {
+            document.write("Nhiệt độ thích hợp!");
+        }
+    } while (degreeC < 20 || degreeC > 100);
+</script>
+</body>
+</html>
