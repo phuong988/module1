@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng số nguyên</title>
+</head>
+<body>
+
+<script>
+    let arr = [2,4,5,7,8,10,15,22,40,18];
+
+    let maxValue = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
+        }
+    }
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    let average = sum / arr.length;
+
+    document.write("Giá trị lớn nhất trong mảng là: " + maxValue + "<br/>");
+    document.write("Giá trị trung bình trong mảng là: " + average);
+
+
+</script>
+</body>
+</html>

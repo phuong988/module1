@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = 10;
+    let array = [];
+    let i;
+    for (i = 0; i < n; i++) {
+        array.push(+prompt("nhập phần tử thứ: " + i));
+
+    }
+    let check = false;
+    let V = prompt("nhập số cần tìm: ");
+    for (i = 0; i < array.length; i++) {
+        if (V == array[i]) {
+            check = true;
+            index = i;
+            break;
+        }
+    }
+    if (check) {
+        array.splice(index, 1);
+        alert("Mảng sau khi xử lý: " + array.join(','));
+    }
+
+
+</script>
+</body>
+</html>
