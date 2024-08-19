@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+<script>
+    //đỉnh bên trên trái
+    let size = 5;
+    let result = '';
+    for (let i = 1; i <= size; i++) {
+        result += '*'.repeat(i) + '\n';
+    }
+    console.log(result);
+    console.log('\n');
+    // đỉnh bên dưới trái
+    for (let i = size; i >= 1; i--) {
+        result += '*'.repeat(i) + '\n';
+    }
+    console.log(result);
+    // đỉnh bên trên phải
+    for (let i = 1; i <= size; i++) {
+        result += ' '.repeat(size - i) + '*'.repeat(i) + '\n';
+    }
+    console.log(result);
+    // đỉnh bên dưới phải
+    for (let i = size; i >= 1; i--) {
+        result += ' '.repeat(size - i) + '*'.repeat(i) + '\n';
+    }
+    console.log(result);
+
+
+</script>
+</body>
+</html>

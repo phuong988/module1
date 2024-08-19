@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>In dãy Fibonacci</title>
 </head>
 <body>
+<script>
 
+    let n1 = 0, n2 = 1, nextTerm;
+    let n = parseInt(prompt("nhập độ dài của dãy fibonacci: "));
+
+    for (let i = 0; i < n; i++) {
+        document.write(n1 + "<br>");
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+
+
+</script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi kép</title>
+</head>
+<body>
+<script>
+    let soTienGui = parseInt(prompt("nhập số tiền vay: "));
+    let laiSuat = parseInt(prompt("Nhập lãi suất(%) 1 tháng: "));
+    let months = parseInt(prompt("nhập số tháng vay:"));
+    // Biến lưu trữ số tiền hiện tạo, ban đầu bằng số tiền gốc
+    let amount = soTienGui;
+    for (let i = 0; i < months; i++) {
+        amount += amount * (laiSuat/100);
+    }
+    document.write("Số tiền cuối cùng phải trả sau " + months + " tháng là: " + amount.toFixed(2));
+</script>
+</body>
+</html>

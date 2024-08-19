@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số lần xuất hiện</title>
+</head>
+<body>
+<script>
+  let arr=[1,2,4,6,7,10,1];
+  let x = parent(prompt("nhập x: "));
+  let dem =0;
+  for(const value of arr){
+    if(x == value){
+        console.log(x);
+      dem++;
+    }else{
+      alert(" không có x trong mảng!");
+    }
+  }
+  alert(dem);
+  let arr = [1, 2, 4, 6, 7, 10,1];
+  let x = +prompt("Nhập phần tử cần tìm:");
+  let count = 0;
+  arr.forEach(function (value) {
+      if (value === x) {
+          count++;
+      }
+  });
+
+  document.write( " số lầnxuất hiện của "+ x + " là " + count + " lần trong mảng.");
+</script>
+</body>
+</html>
