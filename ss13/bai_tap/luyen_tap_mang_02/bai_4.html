@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong chuỗi</title>
+</head>
+<body>
+<script>
+
+    let n = 'hello  viet nam__';
+    let words = n.split(/\s+/);// \s+ sẽ khớp với một hoặc nhiều khoảng trắng
+    let arrwords = [];
+    for (let i = 0; i < words.length; i++) {
+        if (words.length > 0) {
+            arrwords.push(words[i]);
+        }
+    }
+    let length = arrwords.length;
+    alert("số từ trong chuỗi là: " + length);
+</script>
+</body>
+</html>

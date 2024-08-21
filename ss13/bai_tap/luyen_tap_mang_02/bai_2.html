@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược</title>
+</head>
+<body>
+<script>
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    let temp = [];
+    for (let i = (array.length - 1); i >= 0; i--) {
+        temp.push("'" + array[i] + "'");
+    }
+    document.write(temp.join(','));
+</script>
+</body>
+</html>

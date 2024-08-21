@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem 2 chuỗi có giống nhau không </title>
+</head>
+<body>
+<script>
+    let equal = true;
+    let a = prompt("Nhập chuỗi thứ nhất: ");
+    let b = prompt("nhập chuỗi thứ hai: ");
+    let word1 = a.split(/\s+/);
+    let word2 = b.split(/\s+/);
+    if (word1.length !== word2.length) {
+        alert("hai chuỗi không giống nhau!");
+    } else {
+        for (i = 0; i < word1.length; i++) {
+            if (word1[i] != word2[i]) {
+                equal = false;
+                break;
+            }
+        }
+    }
+    if (equal) {
+        alert("Hai chuỗi giống nhau!");
+    } else {
+        alert("hai chuỗi không giống nhau!");
+    }
+</script>
+</body>
+</html>
