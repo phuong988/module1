@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let check = true;
+        if (number < 2) {
+            document.write(number + " không phải số nguyên tố:");
+            return;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            document.write(number+'</br>');
+        }
+    }
+
+    // let x = +prompt("Nhập vào số nguyên:");
+    // while(!Number.isInteger(x) ){
+    //     x = +prompt("nhập lại số nguyên: ");
+    // }
+    // isPrime(x);
+    for(let i = 2 ; i < 10000; i++){
+        isPrime(i);
+    }
+</script>
+</body>
+</html>

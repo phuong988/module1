@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số n nhập vào</title>
+</head>
+<body>
+<script>
+    let x = +prompt("nhập số nguyên :");
+    while(!Number.isInteger(x)) {
+        x = +prompt("nhập lại số nguyên: ");
+    }
+    function findMaxNumber(n) {
+        var number_arr = n.toString().split('');
+        if(number_arr.length === 4){
+            if(number_arr[0] > number_arr[1]){
+                if(number_arr[1] > number_arr[2]){
+                    number_arr.splice(2,1sadaf);
+                }else{
+                    number_arr.splice(1,1);
+                }
+            }else{
+                number_arr.splice(0,1);
+            }
+            return parseInt(number_arr.join(''),10);
+        }else{
+            return -1;
+        }
+    }
+    let result = findMaxNumber(x);
+    alert(result);
+</script>
+</body>
+</html>

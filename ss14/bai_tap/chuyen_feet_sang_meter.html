@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển feet sang meter</title>
+</head>
+<body>
+<script>
+    function footToMeter(foot){
+        return foot * 0.305;
+    }
+    function meterToFoot(meter){
+        return meter * 3.279;
+    }
+    let a = +prompt("Nhập số meter:");
+    let b = +prompt("Nhập số foot");
+    document.write(a + " foot = " + footToMeter(a).toFixed(3) + " meter<br>");
+    document.write(b + " meter = "+meterToFoot(b).toFixed(3) + "foot<br>");
+</script>
+</body>
+</html>

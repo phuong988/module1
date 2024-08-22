@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function judge(number1, number2) {
+        let sum = 0;
+        if (number1 > number2) {
+            alert(number1 + " lớn hơn " + number2);
+        } else {
+            return alert(sum = number1 + number2);
+        }
+    }
+
+    let a = +prompt("nhập số thứ nhất: ");
+    while (!Number.isInteger(a)) {
+        a = +prompt("nhập lại số thứ nhất: ")
+    }
+    let b = +prompt("nhập số thứ hai: ");
+    while (!Number.isInteger(b)) {
+        b = +prompt("nhập lại số thứ hai:");
+    }
+    judge(a, b);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>duyệt mảng ngôi sao</title>
+</head>
+<body>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "leo"];
+
+    function check_star(star) {
+        let index = -1;
+        for (let i = 0; i < star1.length; i++) {
+            if (star === star1[i]) {
+                index = i;
+                break;
+            }
+        }
+        if (index !== -1) {
+            return "tên của chòm sao là: " + star2[index];
+        } else {
+            return "không tìm thấy ngôi sao!";
+        }
+    }
+
+    let star = prompt("nhập vào 1  chuỗi: ");
+    document.write(check_star(star));
+</script>
+</body>
+</html>

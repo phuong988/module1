@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra tam giác</title>
+</head>
+<body>
+<script>
+    function checkTriangle(x, y, z) {
+        var x, y, z;
+        if (x > 0 || y > 0 || z > 0) {
+            if ((x + y > z) && (x + z > y) && (y + z > x)) {
+                if ((Math.pow(x,2) === Math.pow(y,2) + Math.pow(z,2)) || (Math.pow(x,2) + Math.pow(y,2) === Math.pow(z,2)) || (Math.pow(x,2) + Math.pow(z,2) === Math.pow(y,2))) {
+                    alert("là 3 cạnh của tam giác vuông");
+                } else {
+                    alert("chỉ là 3 cạnh của một tam giác");
+                }
+            } else {
+                alert("x, y , z không phải là cạnh của tam giác");
+            }
+        } else {
+            alert("x, y , z không phải là cạnh của tam giác");
+        }
+    }
+
+    let canh1 = +prompt("nhập độ dài cạnh thứ nhất : ");
+    while (Number(canh1) !== canh1) {
+        canh1 = +prompt("nhập lại cạnh thứ nhất");
+    }
+    let canh2 = +prompt("nhập độ dài cạnh thứ hai: ");
+    while (Number(canh2) !== canh2) {
+        canh1 = +prompt("nhập lại cạnh thứ hai");
+    }
+    let canh3 = +prompt("nhập độ dài cạnh thứ ba :");
+    while (Number(canh3) !== canh3) {
+        canh1 = +prompt("nhập lại cạnh thứ ba");
+    }
+    let result = checkTriangle(canh1, canh2, canh3);
+</script>
+</body>
+</html>
