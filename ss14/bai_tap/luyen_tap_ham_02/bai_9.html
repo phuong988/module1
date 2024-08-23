@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự có nằm trong mảng không</title>
+</head>
+<body>
+<script>
+    function ham(array, char) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == char) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let arr = ["b", 5, 6, "v", "a", "f", "l", , "s", "b"];
+    let char = "4";
+    alert(ham(arr, char));
+</script>
+</body>
+</html>

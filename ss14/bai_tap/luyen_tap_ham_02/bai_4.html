@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự</title>
+</head>
+<body>
+
+<script>
+    function checkCharacter(char) {
+        return !isNaN(char) && char !== " ";
+    }
+
+    let char1 = "5";
+    let char2 = "c";
+    let char3 = " ";
+    alert(checkCharacter(char1));
+    alert(checkCharacter(char2));
+    alert(checkCharacter(char3));
+
+
+</script>
+</body>
+</html>

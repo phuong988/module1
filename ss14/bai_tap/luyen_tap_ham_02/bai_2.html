@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi</title>
+</head>
+<body>
+<script>
+    function area(radius) {
+        return "Diện tích hình tròn là: " + radius * 3.14;
+    }
+
+    function perimeter(radius) {
+        return "Chu vi hình tròn là: " + 2 * radius * 3.14;
+    }
+
+    let number = +prompt("nhập bán kính hình tròn: ");
+    while (isNaN(number) || number === "") {
+        number = +prompt("Nhập lại bán kính hình tròn: ");
+    }
+    document.write(area(number) + "<br>");
+    document.write(perimeter(number));
+
+</script>
+</body>
+</html>
