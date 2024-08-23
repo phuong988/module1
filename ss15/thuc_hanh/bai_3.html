@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // let circle= {
+    //     radius: 10,
+    //     color : "red",
+    //     display(){
+    //         alert("hiển thi thông tin của hình tròn : radius :"+this.radius + "-color: "+ this.color)
+    //     }
+    // }
+    //     let circle2= {
+    //     radius: 20,
+    //     color : "blue",
+    //     display(){
+    //         alert("hiển thi thông tin của hình tròn : radius :"+this.radius + "-color: "+ this.color)
+    //     }
+    // }
+    // let Circle = function (radius) {
+    //     this.radius = radius;
+    //     this.getRadius = function() {
+    //         return radius;
+    //     }
+    //     this.setRadius= function (r) {
+    //         this.radius =r;
+    //     }
+    //     this.getArea = function() {
+    //         return Math.PI * radius * radius;
+    //     }
+    // };
+
+    class Circle {
+        // method đặc biệt sử dụng để  khởi tạo đối tượng bừng từ khoá new
+        constructor(r, c) {
+            this.radius = r;
+            this.color = c;
+        }
+
+        // vì sao tạo để làm gì?
+        // tính bao đóng encapsulation
+        getRadius() {
+            return this.radius;
+        }
+
+        setRadius(r) {
+            this.radius = r;
+        }
+
+        getArea() {
+            return 3.14 * this.radius * this.radius;
+        }
+
+    }
+
+    let circle = new Circle(10, "red");
+    alert(circle.radius)
+    circle.setRadius(30);
+    alert(circle.radius)
+    // cú pháp es6 => version 2015.
+
+</script>
 </body>
 </html>

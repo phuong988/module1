@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật</title>
+
+</head>
+<body>
+<canvas id="paintcanvas" width="800" height="600"></canvas>
+<script>
+    class Rectangle {
+
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height;
+        }
+        set Width(width){
+            this.width = width;
+        }
+        set Height(height){
+            this.height = height;
+        }
+        getArea() {
+            return this.width* this.height;
+        }
+        getPerimeter() {
+            return 2 * (this.width + this.height);
+        }
+    };
+
+    const myRectangle = new Rectangle(200,100);
+    let width = myRectangle.getWidth();
+    let height = myRectangle.getHeight();
+    let area = myRectangle.getArea();
+    let perimeter = myRectangle.getPerimeter()
+    document.write(`Area: ${area}<br>`);
+    document.write(`Perimeter: ${perimeter}<br>`);
+
+    let canvas = document.getElementById("paintcanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = '#00CC33';
+    ctx.fillRect(10,10, width, height);
+
+</script>
+</body>
+</html>
