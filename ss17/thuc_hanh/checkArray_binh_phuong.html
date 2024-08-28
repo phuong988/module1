@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = Number(prompt("nhập số lượng phần tử trong mảng:"));
+    let array = [];
+    let check;
+    for( let i=0 ; i< n; i++) {
+        array.push(Number((prompt("Nhập phần tử thứ  "+(i+1)+ "trong mảng:"))));
+    }
+
+    if(array.length % 2 === 0) {
+        for(let i = 0; i < array.length/2; i++){
+            if(Math.pow(array[i],2) !== array[array.length/2+i]) {
+                document.write("false");
+                break;
+            }
+            else{
+                check = true;
+            }
+        }
+    }else{
+        for(let i = 0; i < Math.floor(array.length/2); i++){
+            if(Math.pow(array[i],2) !== array[Math.floor(array.length/2)+i+1]) {
+                check = false;
+                break;
+            }
+            else{
+                check = true;
+            }
+        }
+    }
+    if(check) {
+        document.write("true");
+    }else {
+        document.write("false");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng sự hoạt động của đèn pin</title>
+</head>
+<body>
+<script>
+    class FlashLamp {
+
+        constructor() {
+            this.status = false;
+            this.battery = Battery;
+        }
+        getBattery() {
+            return this.battery;
+        }
+        setBattery(battery) {
+            this.battery = battery;
+        }
+        light() {
+            if(!this.status) {
+                return "đèn đang sáng!";
+            }else {
+                return "đèn đang  tắt!";
+            }
+        }
+        turnOn() {
+            if(this.battery) {
+
+            }
+        }
+
+    }
+    class Battery {
+        constructor() {
+            this.energy = energy;
+        }
+        getEnergy() {
+            return this.energy;
+        }
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+        decreaseEnergy() {
+
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
