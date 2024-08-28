@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Management</title>
-    <style>table {
-    width: 550px;
-    border-collapse: collapse;
-    }
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
 
-    td, th {
-    border: 1px solid #dddddd;
-    padding: 5px;
-    }
+        td, th {
+            border: 1px solid #666666;
+            padding: 5px;
+        }
+
+        thead {
+            background-color: #2f2fb6;
+            color: white;
+        }
+
+        .btn-update, .btn-add, .btn-edit {
+            background-color: #4e9f02;
+            color: white;
+        }
+        .btn-delete {
+            background-color: red;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -22,8 +37,8 @@
 <input type="number" id="price-product" placeholder="Product Price">
 <input type="number" id="quantity-product" placeholder="Product Quantity">
 <input type="hidden" id="id-product">
-<button onclick="addProduct()">Add Product</button>
-<button onclick="productManager.editProduct()">Edit Product</button>
+<button class="btn-add" onclick="addProduct()">Add Product</button>
+<button class="btn-edit" onclick="productManager.editProduct()">Edit Product</button>
 
 <table>
     <thead>
