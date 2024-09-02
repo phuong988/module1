@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Máy Tính</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<table id="table"></table>
+<center>
+    <button onclick="themMayTinhMoi()">Thêm máy tính mới</button>
+</center>
+<p>Sắp Xếp</p>
+<button onclick="sapXepDanhSachMayTinhTang()">Sắp xếp tăng dần theo giá</button>
+<button onclick="sapXepDanhSachMayTinhGiam()">Sắp xếp giảm dần theo giá</button>
+
+<script>
+    class MayTinh {
+        constructor(maMay, tenMay, tenHang, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.giaBan = giaBan;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+    }
+
+    let danhSachMayTinh = [
+        new MayTinh('MT001', 'Dell XPS 13', 'Dell', 2000),
+        new MayTinh('MT002', 'MacBook Pro', 'Apple', 3000),
+        new MayTinh('MT003', 'ThinkPad X1', 'Lenovo', 2500),
+        new MayTinh('MT004', 'Asus ZenBook', 'Asus', 1800),
+        new MayTinh('MT005', 'HP Spectre x360', 'HP', 2200),
+        new MayTinh('MT006', 'Razer Blade 15', 'Razer', 3500),
+    ];
+
+    function hienThiDanhSachMayTinh() {
+        let danhSach = `<tr>
+                            <th>Mã Máy</th>
+                            <th>Tên Máy</th>
+                            <th>Tên Hãng</th>
+                            <th>Giá Bán</th>
+                        </tr>`;
+        for (let i = 0; i < danhSachMayTinh.length; i++) {
+            danhSach += `<tr>
+                            <td>${danhSachMayTinh[i].maMay}</td>
+                            <td>${danhSachMayTinh[i].tenMay}</td>
+                            <td>${danhSachMayTinh[i].tenHang}</td>
+                            <td>${danhSachMayTinh[i].giaBan}$</td>
+                         </tr>`;
+        }
+        document.getElementById('table').innerHTML = danhSach;
+    }
+
+    function themMayTinhMoi() {
+        let maMay = prompt('Nhập mã máy tính mới');
+        let tenMay = prompt('Nhập tên máy tính mới');
+        let tenHang = prompt('Nhập tên hãng sản xuất');
+        let giaBan = prompt('Nhập giá bán máy tính mới');
+        let mayTinhMoi = new MayTinh(maMay, tenMay, tenHang, giaBan);
+        danhSachMayTinh.push(mayTinhMoi);
+        hienThiDanhSachMayTinh();
+    }
+
+    function sapXepDanhSachMayTinhTang() {
+        danhSachMayTinh.sort((a, b) => a.giaBan - b.giaBan);
+        hienThiDanhSachMayTinh();
+    }
+
+    function sapXepDanhSachMayTinhGiam() {
+        danhSachMayTinh.sort((a, b) => b.giaBan - a.giaBan);
+        hienThiDanhSachMayTinh();
+    }
+
+    hienThiDanhSachMayTinh();
+</script>
+</body>
+</html>

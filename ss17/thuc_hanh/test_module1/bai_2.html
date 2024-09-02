@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let strArr = "";
+        let words = str.trim().split(/\s+/); // tách chuổi thành mảng từ
+        if (words.length < 2) {
+            return "Chuỗi chỉ có 1 từ nên không cần viết tắt <br>";
+        } else {
+            for (let i = 0; i < words.length; i++) {
+                strArr += words[i].charAt(0).toUpperCase();
+            }
+            return strArr;
+        }
+    }
+
+
+    let name = "object Oriented programing";
+    let string = "ObjectOriented"
+    document.write(checkString(string));
+    document.write(checkString(name));
+</script>
+</body>
+</html>

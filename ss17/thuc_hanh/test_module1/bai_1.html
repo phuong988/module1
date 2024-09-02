@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let sum = 0, count = 0;
+    let n = +prompt("Nhập số phần tử của mảng: ");
+    while (isNaN(n) || n < 0 || n > 50) {
+        n = +prompt("Nhập lại độ dài n: ");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt(`Nhập phần tử thứ  ${i + 1} trong mảng là: `));
+    }
+    document.write(`Mảng vừa nhập là : ${array} `);
+    for (let i = 0; i < n; i++) {
+        if (array[i] % 5 === 0 && i % 3 === 0) {
+            count++;
+            sum += array[i];
+        }
+    }
+    let average = sum / count;
+    document.write(`<br>Giá trị trung bình của các phần tử chia hết cho 5 và vị trí chia hết cho 3 là: ${average}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        let newString = "";
+        let words = str.split(" ");
+        if(words.length === 1) {
+            newString = words[0];
+        }else {
+            for (let i = 0; i < words.length; i++) {
+                if( i === 0){
+                    newString += words[i][0]; // Lấy kí tự đầu tiên của từ đầu
+                }else if (words[i].length > 0) {
+                    newString += words[i][0]; // lấy ký tự đầu tiên của các từ
+                }
+            }
+        }
+        document.write(newString);
+    }
+    checkString("Hello"+"<br>");
+    checkString("Object Oriented Programing");
+</script>
+</body>
+</html>
