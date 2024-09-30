@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Nhập 1 mảng 2 chiều  từ bàn phím với độ dài m*n -->
+<!--Hiện thị mảng sau khi thêm mới các phần tử -->
+<!--Tính tổng cac phần tử 2 đường chéo của mảng-->
+<!--Ví dụ: 	1	2	3	4
+            5	1	3	3
+            2	5	2	3
+            2	3	5	1-->
+<script>
+    // let array = [
+    //     [1, 2, 3 4], [5, 1, 3 , 3], [2, 5, 2, 3], [2, 3, 5 , 1];
+    // ];
+    let n = +prompt("Nhập độ dài của mảng: ");
+    while(isNaN(n) || n <= 0 || n ==="") {
+        n = +prompt(" Nhập lại số phần tử trong mảng: ");
+    }
+    let array =[];
+    for(let i =0; i < n; i++) {
+        row = [];
+        for(let j = 0; j < n; j++ ) {
+            let valua = +prompt(`Nhập phần tử thứ [${i + 1}][${j}] trong mảng là: `);
+            row.push(valua);
+        }
+        array.push(row);
+    }
+    console.log("Mảng 2 chiều vừa nhập là:");
+    for (let row of array) {
+        console.log(row);
+    }
+    document.write("<h3>Mảng 2 chiều vừa nhập là:</h3>");
+    document.write("<pre>" + JSON.stringify(array, null, 2) + "</pre>");
+    let diagonalSum = 0;
+    let antiDiagonalSum = 0;
+    for(let i = 0; i < n; i++) {
+        diagonalSum += array[i][i];
+        antiDiagonalSum += array[i][n - 1 - i];
+    }
+    let totalSum = diagonalSum + antiDiagonalSum;
+    document.write("Tổng các phần tử của 2 đường chéo: " + totalSum);
+
+</script>
 </body>
 </html>

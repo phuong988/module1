@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title></title>
 </head>
 <body>
-$END$
+<!--Khai báo  1 mảng số nguyên từ bàn phím với độ dài n. -->
+<!--Nhập các phần tử cho  mảng với  một số nguyên lớn hơn 10 và nhỏ hơn 100. -->
+<!--Hiện thị mảng sau khi thêm mới các phần tử Viết chương trình hiện thị các phần tử của mảng có hàng đơn vị lớp hơn hàng chục-->
+<!--ví dụ: [11, 12, 21 , 56, 19] => kết quả hiện thị ra 12,56,19-->
+<script>
+
+    n = +prompt("nhập độ dài mảng");
+    while (isNaN(n) || n < 0 || n === "") {
+        n = +prompt("Nhập lại độ dài mảng:");
+    }
+    let arr, array = [];
+    for (let i = 0; i < n; i++) {
+        do {
+            arr = +prompt(" nhập lại phần tử thứ " + (i + 1) + " từ 10 đến 100: ");
+        } while (arr < 10 || arr > 100)
+        array.push(arr);
+    }
+    document.write("mảng vừa nhập là: " + array);
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (Math.floor((array[i] / 10) % 10) < array[i] % 10) {
+            newArray.push(array[i]);
+        }
+    }
+    document.write("<br>" + "Các số hàng đơn vị lớn hơn hàng chục trong mảng là : " + newArray);
+    a = 5.5 % 10;
+    alert(a);
+</script>
 </body>
 </html>

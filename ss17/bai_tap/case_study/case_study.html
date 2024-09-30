@@ -5,6 +5,39 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="canvas" style="border: 1px solid red;"></canvas>
+<h3>Score: 0</h3>
+<script>
+    let canvas = document.getElementById("canvas");
+    let context = canvas.getContext('2d');
+    canvas.height = 500;
+    canvas.width = 1000;
+    let building = new Image();
+    building.src ='building.png';
+    let bird = new Image();
+    bird.src= 'bird2.png';
+    let birdObj = {
+        x: canvas.width / 5,
+        y: canvas.height / 3
+    };
+    let imagesLoaded = 0;
 
+    function imageLoaded() {
+        imagesLoaded++;
+        if (imagesLoaded === 2) {
+            run(); // Vẽ khi cả hai hình ảnh đã tải
+        }
+    }
+    function run() {
+        context.drawImage(building,0,0,1000, 500);
+        context.drawImage(bird,birdObj.x,birdObj.y,40, 40);
+
+    }
+    building.onload = imageLoaded;
+    bird.onload = imageLoaded;
+    run();
+
+
+</script>
 </body>
 </html>

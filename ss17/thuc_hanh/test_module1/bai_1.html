@@ -9,7 +9,7 @@
     let array = [];
     let sum = 0, count = 0;
     let n = +prompt("Nhập số phần tử của mảng: ");
-    while (isNaN(n) || n < 0 || n > 50) {
+    while (isNaN(n) || n < 0 || n > 50|| n %1 != 0) {
         n = +prompt("Nhập lại độ dài n: ");
     }
     for (let i = 0; i < n; i++) {

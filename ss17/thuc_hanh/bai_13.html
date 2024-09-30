@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Nhập 1 mảng từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử-->
+<!--Kiểm tra mảng vừa nhập. Nếu tất cả các phần tử trong mảng là-->
+<!--số nguyên tố  thì hiện thị thông báo "OK", -->
+<!--nếu không thoả mãn thì hiện thị "NO"-->
+<script>
+    let array = [];
+    let n = prompt("Nhập số lượng phần tử trong mảng: ");
+    while (isNaN(n) || n === "" || n < 0) {
+        n = +prompt("Nhập lại số lượng phần tử cho đúng: ");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt("Nhập phần tử thứ " + (i + 1) + " trong mảng là: "));
+    }
+    document.write(array);
+    let check = true;
+
+    for (let i = 0; i < n; i++) {
+        if (array[i] < 2) {
+            check = false;
+        }
+        for (let j = 2; j < array[i]; j++) {
+            if (array[i] % j === 0) {
+                check = false;
+            }
+        }
+    }
+    if (check) {
+        alert("OK");
+    } else {
+        alert("NO");
+    }
+</script>
 </body>
 </html>

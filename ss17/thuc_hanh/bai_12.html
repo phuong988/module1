@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết hàm truyền vào tham số là một chuỗi.. checkDate(dateString)-->
+<!--Kiểm tra xem chuối nhập vào dateString có phải là định dạng của -->
+<!--ngày tháng năm hay không ( dd/mm/yyyy) -->
+<!--Nếu đúng return true, sai return false-->
+<script>
+    function checkDate(dataString) {
+        // Biểu thwusc chính quy cho định dạng dd/mm/yyyy
+        const dataPattern = /^(0[1-9]|[12][0-9]|3[01])[\/-](0[1-9]|1[0-2])[\/-](\d{4})$/;
+        if(!dataPattern.test(dataString)){
+            return false;
+        }else{
+            return true
+        }
+        //c1:
+        // Tách ngày, tháng, năm từ chuỗi
+        // const [day, month, year] = dateString.split('/').map(Number);
+
+        // Kiểm tra tính hợp lệ của ngày tháng (ví dụ, ngày không vượt quá số ngày trong tháng)
+        // const date = new Date(year, month - 1, day);
+
+        // Kiểm tra ngày, tháng và năm sau khi tạo đối tượng Date
+        // return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+        //
+    //c2:
+    // Tách ngày, tháng, năm
+        // const parts = dateString.split('/');
+        // const day = parseInt(parts[0], 10);
+        // const month = parseInt(parts[1], 10);
+        // const year = parseInt(parts[2], 10);
+
+        // Kiểm tra tính hợp lệ của ngày trong tháng
+    //     const date = new Date(year, month - 1, day);
+    //     return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
+    }
+    console.log(checkDate("10/09/1998"));
+    console.log(checkDate("32/01/2022"));
+
+
+</script>
 </body>
 </html>

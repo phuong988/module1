@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function checkString(str) {
+        let countUppercase = 0;
+        let countLowercase = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] >= "A" && str[i] <= "Z") {
+                countUppercase++;
+            } else if (str[i] >= "a" && str[i] <= "z") {
+                countLowercase++;
+            }
+        }
+        if (countUppercase === countLowercase) {
+            document.write("true");
+        } else {
+            document.write("false");
+        }
+    }
+
+    let string = "Le le Viet Minh PHUONG";
+    checkString(string);
+</script>
 </body>
 </html>

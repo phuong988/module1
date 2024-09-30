@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let array = [];
+    let check = true;
+    let n = +prompt("nhap số lượng phần tử mảng là số chẵn: ");
+    while (n % 2 !== 0 || parseInt(n) !== n) {
+        n = +prompt("nhập lại số lượng phần tử trong mảng là số chẵn: ");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt("nhap phần thử thứ " + i + " của mảng là: "))
+    }
+    document.write(array);
+    for (let i = 0; i < n - 1; i += 2) {
+        if (array[i] > array[i + 1]) {
+            check = false;
+        }
+    }
+    if (check) {
+        document.write("<br>" + "OK");
+    } else {
+        document.write("<br>" + "NO");
+    }
+</script>
 </body>
 </html>

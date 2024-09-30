@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function check(str) {
+        let array = [];
+        let vowels = "aoiue" // kiem tra theo tieng anh
+        for (let i = 0; i < str.length; i++) {
+            if (vowels.includes(str[i])) {
+                array.push(str[i]);
+            }
+        }
+        document.write("Các ký tự là số nguyên âm trong mảng là " + array);
+    }
+
+    let string = "code gym newbie start";
+    check(string);
+</script>
 </body>
 </html>

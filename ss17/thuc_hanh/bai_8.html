@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let array = [], maxArray, temp = 0, a;
+    let n = +prompt("Nhập số luong phân tử trong mảng: ");
+    while (isNaN(n) || n < 0 || n === "") {
+        n = +prompt("nhập lại số lượng phần tử cho đúng:");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt("Nhập phần tử thứ " + (i + 1) + " trong mảng là:"));
+    }
+    document.write("Mảng vừa nhập là: " + array);
+    maxArray = Math.max(...array); // tìm giá trị lớn nhất trong mảng
+    // console.log(maxArray);
+    // for(let i = 0; i < n ; i++) {
+    //     if(array[i] === maxArray) {
+    //         temp++;
+    //     }
+    // }
+    let count = array.filter(num => num === maxArray).length;
+    document.write(" Số lượng số lớn nhất trong mảng là: " + count);
+
+
+</script>
 </body>
 </html>

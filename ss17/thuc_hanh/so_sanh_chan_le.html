@@ -6,28 +6,28 @@
 </head>
 <body>
 <script>
-    let n = +prompt("Nhập độ dài mảng n:");
-    while(isNaN(n) && n == ""){
-        n = prompt("nhập lại n");d
-    }
-    let array = [];
-    let even= 0;
-    let odd = 0;
-    for(let i = 0; i <n ; i++) {
-        array.push(prompt("Nhập phần tử thứ "+ (i +1) + ":"));
-        if( array[i] % 2 == 0) {
-            even ++;
-        }else {
-            odd ++;
+    function checkArray(arr) {
+        const n = arr.length;
+        const mid = Math.floor(n / 2);
+        let check = true;
+
+        // Kiểm tra nửa đầu và nửa sau
+        for (let i = 0; i < mid; i++) {
+            if (Math.pow(arr[i], 2) !== arr[n - mid + i]) {
+                check = false;
+                break;
+            }
         }
-    }
-    document.write(array);
-    if(even == odd) {
-        alert("OK");
-    }else {
-        alert("NO");
+
+        return check;
     }
 
+    // Ví dụ sử dụng
+    const array1 = [1, 2, 5, 1, 2, 1, 4,25,1,4]; // Chẵn
+    const array2 = [2, 3, 1,4, 9]; // Lẻ
+
+    console.log(checkArray(array1)); // true
+    console.log(checkArray(array2)); // false
 </script>
 </body>
 </html>

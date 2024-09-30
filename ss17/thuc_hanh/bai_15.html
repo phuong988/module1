@@ -1,10 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Nhập 1 mảng số từ bàn phím với độ dài n
+Hiện thị mảng sau khi thêm mới các phần tử
+Kiểm tra mảng vừa nhập. Nếu tất cả các phần tử trong mảng
+đều thuộc dãy số fibonacci  thì hiện thị thông báo "OK", nếu không thoả mãn thì hiện thị "NO"-->
+<script>
+    // let array = [];
+    // let n = prompt("Nhập số lượng phần tử trong mảng: ");
+    // while (isNaN(n) || n === "" || n < 0) {
+    //     n = +prompt("Nhập lại số lượng phần tử cho đúng: ");
+    // }
+    // for (let i = 0; i < n; i++) {
+    //     array.push(+prompt("Nhập phần tử thứ " + (i + 1) + " trong mảng là: "));
+    // }
+    // document.write(array);
+    // let check = true;
+    // let fib =[0,1], fibonacci=[];
+    // for(let i = 2; i < Number; i++) {
+    //     fib[i] = fib[i - 1] + fib[i - 2];
+    // }
+    // document.write(fib);
+    // for(let i = 2; i < n ; i ++ ) {
+    //     if (array[i] === ) {
+    //
+    //     }
+    // }
+    //
+    //
+    //
+    // if(check){
+    //     alert("OK");
+    // }else{
+    //     alert("NO");
+    // }
+    let n = prompt("Nhập độ dài");
+    while (n <= 0 || n > 20 || parseInt(n) !== n) {
+        n = prompt("nhập lại độ dài(số nguyên từ 1-20)");
+    }
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let element = +prompt("Nhập phần tử thứ " + (i + 1));
+        arr.push(element);
+    }
+    alert("Mảng bạn vừa nhập là: " + arr);
+
+    function isFibonacy(num) {
+        let a = 0;
+        let b = 1;
+        if(num === a ||num === b){
+            return true;
+        }
+        let c = a +b;
+        while( c <= num ){
+            if ( c === num){
+                return  true;
+            }
+            a = b;
+            b = c;
+            c = a+b;
+        }
+        return  false;
+    }
+    function checkFibonaCy (arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (isFibonacy(arr[i]) !== true) {
+                return "Không phải tất cả phần tử trong mảng thuộc dãy Fibonacy: NO";
+            }
+        }
+        return "Tất cả phần tử trong mảng thuộc dãy Fibonacy: OK";
+    }
+    document.write(checkFibonaCy(arr));
+
+</script>
 </body>
 </html>

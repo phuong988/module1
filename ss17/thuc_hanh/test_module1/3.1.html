@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findPrime(array) {
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                newArray.push(array[i]);
+            }
+        }
+        newArray.sort(function (a, b) {
+            return a - b;
+        })
+        return newArray;
+    }
+
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (!(number % i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    document.write(findPrime([1, 5, 6, 23, 8, 47, 10, 3]));
+</script>
+</body>
+</html>

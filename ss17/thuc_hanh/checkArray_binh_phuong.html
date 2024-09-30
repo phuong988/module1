@@ -6,39 +6,28 @@
 </head>
 <body>
 <script>
-    let n = Number(prompt("nhập số lượng phần tử trong mảng:"));
-    let array = [];
-    let check;
-    for( let i=0 ; i< n; i++) {
-        array.push(Number((prompt("Nhập phần tử thứ  "+(i+1)+ "trong mảng:"))));
-    }
+    function checkArray(arr) {
+        const n = arr.length;
+        const mid = Math.floor(n / 2);
+        let check = true;
 
-    if(array.length % 2 === 0) {
-        for(let i = 0; i < array.length/2; i++){
-            if(Math.pow(array[i],2) !== array[array.length/2+i]) {
-                document.write("false");
-                break;
-            }
-            else{
-                check = true;
-            }
-        }
-    }else{
-        for(let i = 0; i < Math.floor(array.length/2); i++){
-            if(Math.pow(array[i],2) !== array[Math.floor(array.length/2)+i+1]) {
+        // Kiểm tra nửa đầu và nửa sau
+        for (let i = 0; i < mid; i++) {
+            if (Math.pow(arr[i], 2) !== arr[n - mid + i]) {
                 check = false;
                 break;
             }
-            else{
-                check = true;
-            }
         }
+
+        return check;
     }
-    if(check) {
-        document.write("true");
-    }else {
-        document.write("false");
-    }
+
+    // Ví dụ sử dụng
+    const array1 = [1, 2, 5, 1, 2, 1, 4, 25, 1, 4]; // Chẵn
+    const array2 = [2, 3, 1, 4, 9]; // Lẻ
+
+    console.log(checkArray(array1)); // true
+    console.log(checkArray(array2)); // true
 </script>
 </body>
 </html>

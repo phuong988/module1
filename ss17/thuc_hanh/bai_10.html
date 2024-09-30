@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Nhập 1 mảng từ bàn phím với độ dài n
+Hiện thị mảng sau khi thêm mới các phần tử
+Hiện thị các số chính phương có trong mảng
+( Số chính phương là các số ví dụ 1,4,9,16,25,36,49……)-->
+<script>
+    let array = [], newArray = [];
+    let n = +prompt("Nhập độ dài mảng: ");
+    while (isNaN(n) || n === "" || n < 0) {
+        n = +prompt("Nhập lại độ dài mảng cho đúng! ");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt(`Nhập phần tử thứ ${i + 1} của mảng là: `));
+        if (array[i] >= 0) {
+
+            if (Math.sqrt(array[i]) === Math.floor(Math.sqrt(array[i]))) {
+                newArray.push(array[i]);
+            }
+        }
+    }
+    document.write(" Mảng vừa nhập là: " + array);
+    document.write("<br>" + "Số chính phương trong mảng vừa nhập là: " + newArray);
+
+</script>
 </body>
 </html>

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết 1 hàm truyền vào 1 tham số (với tham số là một chuỗi),
+ (checkString(str)) "Hàm trả về mảng các ký tự không phải là số[0,….9]
+ và không phải là ký tự alphabet[a…z,A,…Z] "-->
+<script>
+    function checkString(str) {
+        let result ="";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] >= "A" && str[i] <= "Z") {
+                // bỏ qua ký tự in hoa
+            } else if (str[i] >= "a" && str[i] <= "z") {
+                //bỏ qua ký tự thường
+            } else if (str[i] >= 0 && str[i] <= 9) {
+                // bỏ qua số
+            }else{
+                result += str[i];
+            }
+        }
+        document.write(result);
+    }
+
+    let string = "njdnjnsiy4355,...==**00)(p";
+    checkString(string);
+</script>
 </body>
 </html>

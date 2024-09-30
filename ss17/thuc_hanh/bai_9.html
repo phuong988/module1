@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Nhập 1 mảng từ bàn phím với độ dài n-->
+<!--Hiện thị mảng sau khi thêm mới các phần tử "Đếm số lượng số có giá trị bằng giá trinh trung bình của mảng. " "-->
+<!--Ví dụ [1,2,2,3,3,5,4,4] => số lượng số bằng với giá trị trung bình của các phần tử trong mảng  là 2
+( vì giá trị trung bình các phần tử trong mảng là 3=> số 3 xuất hiện 2 lần)"-->
+<script>
+    let temp = 0, average, count, array = [];
+    let n = +prompt("Nhập độ da mảng: ");
+    while (isNaN(n) || n === "" || n < 0) {
+        n = +prompt("Nhập lại độ da mảng: ");
+    }
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt(`Nhập phần tử thứ ${i + 1} trong mảng là: `))
+        temp += array[i];
+    }
+    document.write("mảng vua nhap là: " + array);
+    average = temp / n;
+    count = array.filter(num => num === average).length;
+    console.log(average);
+    document.write("<br>" + "Số lượng số có giá trị bằng giá trị trung bình: " + count);
+
+</script>
 </body>
 </html>
